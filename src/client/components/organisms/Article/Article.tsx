@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
     Tag, 
-    Comment, 
     Avatar,
     Tooltip,
     Typography,
@@ -16,9 +15,10 @@ import {
 } from '@ant-design/icons';
 import { Link as RouterLink } from 'react-router-dom';
 import moment from 'moment';
+import { cn } from '@bem-react/classname';
 import { Article as IArticle } from '@common/types';
 import InformationBlock from './InfromationBlock';
-import { cn } from '@bem-react/classname';
+import Comments from './Comments';
 import './Article.scss';
 
 const cnArticle = cn('Article');
@@ -143,47 +143,8 @@ export default function Article(props: IArticle): JSX.Element {
                         </div>
                         <Title level={3}>Коментарии - {comments?.length}</Title>
                         <div>
-                            {comments?.map((comment) => {
-                            const { author, creationDate, rating, text } = comment;
-                            const { fullName, nickname } = author;
-                            let ratingTextType: 'danger' | undefined = undefined;
-                            if (rating < 0) {
-                                ratingTextType= 'danger'
-                            }
-                            return (
-                                <Comment
-                                    key={creationDate.getDate()}
-                                    author={<Link>{ fullName ? fullName : nickname }</Link>}
-                                    avatar={
-                                        <Avatar style={{ backgroundColor: '#1890FF' }} size={32}>
-                                            { fullName ? fullName[0] : nickname[0].toUpperCase() }
-                                        </Avatar>
-                                    }
-                                    content={
-                                        <Text>
-                                            { text }
-                                        </Text>
-                                    }
-                                    actions={[
-                                        <Tooltip title='Нравиться' key={1}>
-                                            <LikeOutlined />
-                                        </Tooltip>, 
-                                        <Text key={2} style={{ color: rating > 0 ? 'green' : undefined }} type={ratingTextType}>
-                                            { rating > 0 ?  `+${rating}` : rating }
-                                        </Text>, 
-                                        <Tooltip title='Не нравиться' key={3}>
-                                            <DislikeOutlined/>
-                                        </Tooltip>
-                                    ]}
-                                    datetime={
-                                        <Tooltip title={moment(creationDate).format('YYYY-MM-DD HH:mm')}>
-                                            <span>{moment(creationDate).format('YY-MM-DD HH:mm')}</span>
-                                        </Tooltip>
-                                    }
-                                />
-                            )
-                        })}
-                    </div>
+                            <Comments comments={comments} />
+                        </div>
                     </div>
                     { hub && hub.links.length > 0 ? 
                         <div className={cnArticle('InformationBlockWrapper')}>

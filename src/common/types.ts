@@ -4,14 +4,14 @@ export interface Article {
     previewContent: string 
     content: string
     publicationDate?: Date
-    comments?: Comment[]
+    comments: Comment[]
     status: 'published' | 'pending' | 'draft' | 'recalled'
     rating: number
     category: Category
     author: PublicUser
     tags: string[]
     hub?: Hub
-    contributors?: PublicUser[]
+    // contributors: PublicUser[] will be in future.
     viewsNumber: number
 }
 
@@ -41,7 +41,7 @@ export interface User {
     draft: Article[]
     publications: Article[]
     about?: string
-    bookmarks?: Article["id"][] // string === Article.id
+    bookmarks: Article["id"][] // string === Article.id
     subscriptions: Array<Hub["id"] | User["id"]>
     links: string[]
 }
