@@ -41,6 +41,9 @@ module.exports = {
                 include: path.resolve(__dirname, '../'),
             }
         );
+        config.devServer = {
+            port: 3000
+        }
         config.resolve.extensions.push('.ts', '.tsx');
         config.resolve.alias = {
             '@common': path.join(__dirname, 'src', 'common'),
