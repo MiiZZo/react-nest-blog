@@ -15,7 +15,6 @@ export default function SignUpForm(): JSX.Element {
     return (
         <Form
             layout='vertical'
-            initialValues={{ remember: true }}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
         >
@@ -99,7 +98,6 @@ export default function SignUpForm(): JSX.Element {
                     <Button block type="primary" htmlType="submit">
                         Зарегистрироваться
                     </Button>
-                    Есть аккаунт? <a href=''>Войти</a>
                 </Form.Item>
             </div>
         </Form>
