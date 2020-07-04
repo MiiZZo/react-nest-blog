@@ -1,0 +1,102 @@
+@import '../../../scss/mixin.scss';
+
+.Article {
+    &-Container {
+        @include container;
+    }
+    &-Wrapper {
+        display: flex;
+        
+    }
+    &-Title {
+        font-size: 32px;
+    }
+    &-Content {
+        max-width: 800px;
+    }
+    &-Statistics {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    &-Footer {
+        margin-bottom: 20px;
+
+        &AuthorInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 105px;
+            border: 0.4px  solid #a0a0a0;
+            border-radius: 3px;
+            padding: 10px;
+        }
+        &InfoName {
+            margin-left: 10px;
+        }
+        &Info {
+            display: flex;
+            align-items: center;
+        }
+        &SubscribeButton {
+            margin-left: auto;
+        }
+    }
+    &-Statistic {
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    &-RatingWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80px;
+    }
+    &-UserAndPublishingDateWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 220px;
+    }
+    &-InformationBlock {
+        margin-bottom: 50px;
+    }
+    &-InformationBlockWrapper {
+        margin-left: auto;
+    }
+    &-InformationValue {
+        text-align: right;
+        width: 50px;
+    }
+    &-InformationTitle {
+        text-align: center;
+    }
+    &-Hub {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+        &HubWrapper {
+            display: flex;
+        }
+
+        &RatingWrapper {
+            margin-left: 20px;
+            text-align: center;
+        }
+        &AvatarAndRating {
+            display: flex;
+            align-items: center;
+        }
+        &SubscribeButtonWrapper {
+            margin-left: auto;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+POST https://google.com
+
+"Content-Type": "application/json"
+
+{
+    "userId": 1
+}

@@ -1,0 +1,25 @@
+.Header {
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+    top: 0;
+    &-Wrapper {
+        max-width: 1200px;
+        padding: 0 45px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        background: white;
+    }
+    &-UserActionsWrapper {
+        margin-left: auto;
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-Search {
+        max-width: 800px;
+    }
+}

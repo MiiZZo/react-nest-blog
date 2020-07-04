@@ -1,0 +1,12 @@
+.AuthForm {
+    &-Wrapper {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    &-InputIcon {
+        color: #333333;
+    }
+    &-ForgotPasswordLink {
+        float: right;
+    }
+}
