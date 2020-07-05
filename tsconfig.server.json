@@ -1,21 +1,9 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
-    "sourceMap": true,
-    "outDir": "./dist/server",
-    "baseUrl": "./src", 
-    "incremental": true,
-    "resolveJsonModule": true,
-    "moduleResolution": "node",
     "paths": {
-      "@common/*": ["common/*"]
-    },
+      "@shared/*": ["shared/*"]
+    }
   },
   "include": ["./src/server/**/*.ts"],
   "exclude": ["client/**/*.tsx", "./*.js"]
