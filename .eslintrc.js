@@ -1,10 +1,18 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: 'tsconfig.json',
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    },
+    project: "./tsconfig.eslint.json"
   },
-  plugins: ['@typescript-eslint/eslint-plugin'],
+  settings: {
+    react: {
+      version: "detect"
+    }
+  },
+  plugins: ['@typescript-eslint/eslint-plugin', "react-hooks" ],
   extends: [
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
@@ -20,5 +28,7 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
 };

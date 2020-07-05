@@ -1,13 +1,10 @@
 import { FC } from 'react';
 
-
 interface Route {
-    name: string
-    path: string
-    component: FC<any>
-    exact: boolean
+  name: string;
+  path: string;
+  component: FC<any>;
+  exact: boolean;
 }
 
-export const routes: Route[] = [
-  
-];
+export const routes: Route[] = [];

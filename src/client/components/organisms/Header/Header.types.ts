@@ -1,3 +1,3 @@
 export interface Props {
-    auth: boolean
+  auth: boolean;
 }
