@@ -1,0 +1,43 @@
+@import '~draft-js/dist/Draft.css';
+@import url('https://at.alicdn.com/t/font_1923657_0eb25njyy23m.css');
+
+.DraftEditor-root {
+    max-width: 890px!important;
+    padding: 0 45px;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    border-left: .5px solid black;
+    border-right: .5px solid black;
+
+    &::-webkit-scrollbar {
+        border-radius: 10px;
+        width: 6px;
+        background-color: #F5F5F5;
+    } 
+    &::-webkit-scrollbar-thumb {
+        width: 2px;
+        border-radius: 10px;
+        background-color: #1890FF;
+    }
+}
+
+.Paragraph {
+    margin-bottom: 14px;
+}
+
+.text-editor {
+    margin: 0 auto;
+    padding: 0 45px;
+    max-width: 890px;
+}
+
+.Article {
+    &-BlockQuote {
+        background: #fff7d7;
+        border-radius: 3px;
+        padding: 15px;
+        margin: 15px 15px 15px 50px;
+    }
+}
