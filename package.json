@@ -9,7 +9,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" ",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "server:prebuild": "rimraf dist",
-    "server:build": "nest build",
+    "server:build": "nest build -p ./tsconfig.server.build.json",
     "server:start": "nest start",
     "server:dev": "nest start --watch",
     "server:debug": "nest start --debug --watch",

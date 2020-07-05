@@ -5,11 +5,11 @@ import { ArticlesService } from "./articles.service";
 export class ArticlesController {
   constructor(private readonly articleService: ArticlesService) {}
   @Post("create-article")
-  async createArticle(article: any) {
+  async createArticle(article: unknown): Promise<void> {
     this.articleService.createArticle(article);
   }
   @Get()
-  async a() {
+  async a(): Promise<number> {
     return 12;
   }
 }

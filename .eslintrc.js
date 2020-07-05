@@ -4,8 +4,7 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true
-    },
-    project: "./tsconfig.eslint.json"
+    }
   },
   settings: {
     react: {

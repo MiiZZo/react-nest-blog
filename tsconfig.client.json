@@ -2,8 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "paths": {
-      "@shared/*": ["client/shared/*"],
-      "@components/*": ["client/components/*"]
+      "@shared/*": ["src/client/shared/*"],
+      "@components/*": ["src/client/components/*"]
     }
   },
   "exclude": [
