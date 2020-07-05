@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../../organisms/Header/Header';
-import Article from '../../organisms/Article/Article';
+import Header from '../../../organisms/Header/Header';
+import Article from '../../../organisms/Article/Article';
 import { Props } from './Article.types';
 
 export default function ArticlePage(props: Props): JSX.Element {

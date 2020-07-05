@@ -16,7 +16,6 @@ export default function SignInForm(): JSX.Element {
     return (
         <Form
             layout='vertical'
-            initialValues={{ remember: true }}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
         >

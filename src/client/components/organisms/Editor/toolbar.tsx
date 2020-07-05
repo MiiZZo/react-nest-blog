@@ -9,11 +9,10 @@ import {
     UnorderedListOutlined,
     HighlightOutlined,
     DownOutlined,
-    FontSizeOutlined,
     createFromIconfontCN
 } from '@ant-design/icons';
 import { Button, Tooltip, Dropdown, Menu } from 'antd';
-import './toolbar.scss';
+import './Toolbar.scss';
 
 const Icon = createFromIconfontCN({
     scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',

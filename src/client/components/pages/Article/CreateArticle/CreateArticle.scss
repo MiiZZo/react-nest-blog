@@ -1,0 +1,14 @@
+@import '../../../../scss/mixin.scss';
+
+.CreateArticle {
+    &-Container {
+        @include container;
+    }
+    &-Wrapper {
+        margin: 100px auto 0 auto;
+        max-width: 800px;
+    }
+    &-Input {
+        max-width: 800px;
+    }
+}

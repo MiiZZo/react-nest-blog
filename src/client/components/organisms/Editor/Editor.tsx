@@ -8,12 +8,11 @@ import {
     getDefaultKeyBinding,
     CompositeDecorator,
 } from 'draft-js';
-import { HTMLConverter } from './converter';
 import { findLinkEntities, Link } from './entyties/link';
 import { findImageEntities, Image } from './entyties/image';
 import Toolbar from './toolbar';
 import { customStyleMap } from './custom-style-map';
-import './style.scss';
+import './Editor.scss';
 
 function myBlockStyleFn(contentBlock: ContentBlock): string {
     const type = contentBlock.getType()
@@ -151,8 +150,6 @@ export default function DraftEditor(): JSX.Element {
       }
     }
 
-    const [isPreview, setPreview] = useState(false);
-
     const handleChangeEditorState = (editorState: EditorState) => {
         setState({ ...state, editorState });
     }
@@ -186,10 +183,6 @@ export default function DraftEditor(): JSX.Element {
         return getDefaultKeyBinding(e)
     }
     
-    const togglePreview = () => {
-        setPreview(!isPreview)
-    }
-
     let urlInput = null;
   
     if (state.showURLInput) {
@@ -210,35 +203,27 @@ export default function DraftEditor(): JSX.Element {
 
     return (
         <div>
-            <button onClick={togglePreview}>Preview</button>
-            { 
-            !isPreview ? 
-                <div className='text-editor'>
-                    <div className='text-editor__toolbar'>
-                        <Toolbar
-                            urlInput={urlInput}
-                            promptForLink={promptForLink}
-                            removeLink={removeLink}
-                            confirmImage={confirmImage}
-                            handleChangeStyle={handleChangeStyle}
-                            handleChangeTypeBlock={handleChangeTypeBlock}
-                        />
-                    </div>
-                    <Editor
-                        placeholder='...'
-                        onChange={handleChangeEditorState}
-                        editorState={state.editorState}
-                        blockStyleFn={myBlockStyleFn}
-                        keyBindingFn={myKeyBindingFn}
-                        handleReturn={handleReturn}
-                        customStyleMap={customStyleMap}
+            <div className='text-editor'>
+                <div className='text-editor__toolbar'>
+                    <Toolbar
+                        urlInput={urlInput}
+                        promptForLink={promptForLink}
+                        removeLink={removeLink}
+                        confirmImage={confirmImage}
+                        handleChangeStyle={handleChangeStyle}
+                        handleChangeTypeBlock={handleChangeTypeBlock}
                     />
                 </div>
-            :
-            <div dangerouslySetInnerHTML={{__html: HTMLConverter(state.editorState.getCurrentContent())}}>
-
+                <Editor
+                    placeholder='...'
+                    onChange={handleChangeEditorState}
+                    editorState={state.editorState}
+                    blockStyleFn={myBlockStyleFn}
+                    keyBindingFn={myKeyBindingFn}
+                    handleReturn={handleReturn}
+                    customStyleMap={customStyleMap}
+                />
             </div>
-        }
         </div>
     )
 }

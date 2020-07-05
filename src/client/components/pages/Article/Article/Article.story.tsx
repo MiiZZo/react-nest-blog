@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import Article from './Article';
-import { articlePropsValue } from '../../organisms/Article/article.knobs';
+import { articlePropsValue } from '../../../organisms/Article/article.knobs';
 
 export const article = (): JSX.Element => (
   <Article

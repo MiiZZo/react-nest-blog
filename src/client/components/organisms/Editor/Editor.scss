@@ -2,14 +2,15 @@
 @import url('https://at.alicdn.com/t/font_1923657_0eb25njyy23m.css');
 
 .DraftEditor-root {
-    max-width: 890px!important;
-    padding: 0 45px;
-    height: 500px;
+    max-width: 900px!important;
+    padding: 10px;
+    height: 510px;
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
     border-left: .5px solid black;
     border-right: .5px solid black;
+    border-bottom: .5px solid black;
 
     &::-webkit-scrollbar {
         border-radius: 10px;
@@ -25,12 +26,6 @@
 
 .Paragraph {
     margin-bottom: 14px;
-}
-
-.text-editor {
-    margin: 0 auto;
-    padding: 0 45px;
-    max-width: 890px;
 }
 
 .Article {
