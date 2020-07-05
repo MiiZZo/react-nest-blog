@@ -1,8 +1,8 @@
-import React from 'react';
-import SignUpForm from './SignUpForm';
+import React from "react";
+import SignUpForm from "./SignUpForm";
 
-export const signUp = (): JSX.Element => <SignUpForm />
+export const signUp = (): JSX.Element => <SignUpForm />;
 
 export default {
-    title: "Molecules|Auth",
-}
+  title: "Molecules|Auth",
+};

@@ -8,14 +8,15 @@
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./src",
+    "outDir": "./dist/server",
+    "baseUrl": "./src", 
     "incremental": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "paths": {
-      "@common/*": ["./common/*"]
+      "@common/*": ["common/*"]
     },
   },
-  "exclude": ["client"]
+  "include": ["./src/server/**/*.ts"],
+  "exclude": ["client/**/*.tsx", "./*.js"]
 }

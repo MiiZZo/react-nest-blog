@@ -1,6 +1,6 @@
-import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
-import { Document, SchemaTypes } from 'mongoose';
-import { User as IUser } from '../../../common/types';
+import { Schema, Prop, SchemaFactory } from "@nestjs/mongoose";
+import { Document, SchemaTypes } from "mongoose";
+import { User as IUser } from "../../../common/types";
 
 const { ObjectId: ID } = SchemaTypes;
 
@@ -30,7 +30,7 @@ export class User extends Document {
   @Prop({ default: [], type: [String] })
   subscriptions: string[];
 
-  @Prop({ default: [], type: { type: ID, ref: '' } })
+  @Prop({ default: [], type: { type: ID, ref: "" } })
   bookmarks: string[];
 }
 

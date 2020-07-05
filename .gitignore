@@ -8,6 +8,7 @@ yarn-error.log
 .env
 #build
 dist
+build
 # OS
 .DS_Store
 

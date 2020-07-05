@@ -7,10 +7,10 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
+    "outDir": "./dist",
+    "baseUrl": "./src",
     "jsx": "react",
     "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
     "incremental": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
@@ -18,8 +18,5 @@
       "@common/*": ["../common/*"]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-  ]
+  "exclude": ["./*.js"]
 }

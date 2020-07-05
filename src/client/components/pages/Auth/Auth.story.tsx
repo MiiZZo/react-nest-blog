@@ -1,8 +1,8 @@
-import React from 'react';
-import AuthPage from './Auth';
+import React from "react";
+import AuthPage from "./Auth";
 
-export const auth = (): JSX.Element => <AuthPage />
+export const auth = (): JSX.Element => <AuthPage />;
 
 export default {
-    title: 'Pages|auth'
-}
+  title: "Pages|auth",
+};

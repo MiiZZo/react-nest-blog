@@ -1,5 +1,5 @@
-import { SchemaFactory, Schema, Prop } from '@nestjs/mongoose';
-import { Document, SchemaTypes } from 'mongoose';
+import { SchemaFactory, Schema, Prop } from "@nestjs/mongoose";
+import { Document, SchemaTypes } from "mongoose";
 
 const { ObjectId: ID } = SchemaTypes;
 
@@ -10,11 +10,11 @@ export class Article extends Document {
 
   @Prop({ required: true, type: String })
   category:
-    | 'development'
-    | 'administration'
-    | 'design'
-    | 'managment'
-    | 'marketing';
+    | "development"
+    | "administration"
+    | "design"
+    | "managment"
+    | "marketing";
 
   @Prop({
     required: true,
@@ -27,7 +27,7 @@ export class Article extends Document {
         required: true,
         type: {
           type: ID,
-          ref: 'User',
+          ref: "User",
         },
       },
       rating: {
@@ -55,7 +55,7 @@ export class Article extends Document {
   previewContent: string;
 
   @Prop({ required: true, type: String })
-  status: 'published' | 'pending' | 'draft' | 'recalled';
+  status: "published" | "pending" | "draft" | "recalled";
 
   @Prop({ required: true, type: [String] })
   tags: string[];
@@ -64,7 +64,7 @@ export class Article extends Document {
     required: true,
     type: {
       type: ID,
-      ref: 'User',
+      ref: "User",
     },
   })
   author: string;
